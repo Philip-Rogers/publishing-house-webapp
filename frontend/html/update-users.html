@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Users</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"
+        defer></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../javascript/header.js" defer></script>
+    <script src="../javascript/footer.js" defer></script>
+    <script src="../javascript/update-users.js" defer></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="container-header" id="header"></header>
+
+    <!-- MAIN -->
+    <main class="container-main">
+
+        <form class="form" id="update-users-form">
+            <h1 class="heading">Update Users</h1>
+
+            <!-- UPDATE USER ACCOUNT -->
+            <label class="label">User ID</label>
+            <input type="text" placeholder="Enter User ID" class="input" id="userID" name="userID"
+                title="Update User ID" readonly required>
+
+            <label class="label">Username</label>
+            <input type="text" placeholder="Enter Username" class="input" id="username" name="username"
+                pattern="[A-Za-z]{1,25}" title="Update Username" required></input>
+
+            <label class="label">Password</label>
+            <input type="password" placeholder="Enter Password" class="input" id="password" name="password"
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,25}" title="Update Password" required>
+
+            <label for="acessRights">Access Rights:</label>
+            <select id="accessRights" class="form-select" name="accessRights" required>
+                <option value="" disabled selected>Select Access Rights</option> 
+                <option value="user">User</option>
+                <option value="admin">Admin</option>
+            </select>
+
+            <input type="button" value="Update" class="button-submit button-style" onclick="submitForm()"></input>
+
+        </form>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="container-footer" id="footer"></footer>
+</body>
+
+</html>
